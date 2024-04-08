@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap');
+
+:root{
+    --fundo:#000000;
+    --Verde: #6FFF57;
+    --Branco:#ffffff;
+    --Fundo-do-tempo:rgba(58, 55, 94, 0.3);
+    --botão-ativo:#3A375E 50%;
+    --botão-inativo:rgba(58, 55, 94, 0.5);
+    --font: chakra Petch;
+}
+
+body{
+    background-color: var(--fundo);
+    color: var(--Branco);
+    font-family: 'chakra Petch' , sans-serif;
+}
+
+    .conteudo-principal{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width:1200px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .titulo-principal{
+        text-align: left;
+        width: 100%; 
+        font-size: 32px;
+    }
+
+    .titulo-principal span{
+        color: var(--Verde);
+    }
+
+
+
+    .botão{
+        font-family: 'chakra Petch', sans-serif;
+        background-color: var(--botão-inativo);
+        color: var(--Branco);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 1em;
+        font-size: 18px;
+        border-bottom: 4px solid var(--botão-ativo);
+        border-left: 2px solid var(--botão-ativo);
+        border-right: 2px solid var(--botão-ativo);
+        border-top: none;
+    }
+
+    .botão:first-child{
+        border-radius: 40px 40px 0 0;
+        border-bottom: 4px solid var(--Verde);
+    }
+
+    .Botões{
+        display: block; /*Para quando for no mobile fique como coluns e não row */
+    }
+
+    .ativo{
+        background-color: var(--botão-ativo);
+
+    }
+
+    @media screen and (min-width: 768px) {
+        .Botões{
+            display: flex; /*Para quando for aparelhos maiores fique em row e não em coluns*/
+        }
+
+        .botão:first-child{
+            border-radius: 40px 0 0 0 ;
+        }
+
+        .botão:last-child{
+            border-radius: 0 40px 0 0;
+        }
+    }
