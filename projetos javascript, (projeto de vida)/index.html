@@ -2,24 +2,117 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title> Cronômetro Específico para o Ano</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus objetivos do ano</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-        
 </head>
 <body>
     <section class="conteudo-principal">
-        <h2 class="titulo-principal"> Cronômetro dos Ano <span>_</span> </h2> <!--O span  foi usado para customizar o risco de baixo-->
-        <div class="Botões">
-            <button class="botão ativo"> Terminar o curso ALURA </button>
-            <button class="botão"> Término Ano Letivo </button>
-            <button class="botão"> Semana de Provas </button>
-            <button class="botão"> Chegada do inverno </button>
+        <h2 class="titulo-principal">Tempo para os acontecimentos<span>_</span></h2>
+        <div class="conteudo">
+        <div class="botoes">
+            <button class="botao ativo">Cursos na Alura</button>
+            <button class="botao"> Fim de ano </button>
+            <button class="botao"> Semana de Provas </button>
+            <button class="botao"> Feriado </button>
         </div>
-    </section>
+        <div class="abas-textos">
+            <div class="aba-conteudo ativo">
+                <h3 class="aba-conteudo-titulo-principal">Estudar 4 cursos na Alura</h3>
+                <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
+                <div class="contador">
+                        <div class="contador-digito">
+                            <p class="contador-digito-Número" id="dias0"> <!-- Quem vai colocar o valor aqui será o javascript--></p>
+                            <p class="contador-digito-texto"> dias</p>
+                        </div>
+                        <div class="contador-digito">
+                            <p class="contador-digito-Número" id="horas0"></p>
+                            <p class="contador-digito-texto"> horas</p>
+                        </div>
+                        <div class="contador-digito">
+                            <p class="contador-digito-Número" id="min0"></p>
+                            <p class="contador-digito-texto"> min</p>
+                        </div>
+                        <div class="contador-digito">
+                            <p class="contador-digito-Número" id="seg0"></p>
+                            <p class="contador-digito-texto"> seg</p>
+                        </div>
 
-        <script src="main.js"></script>
+                </div>
+            </div>
+            <div class="aba-conteudo">
+                <h3 class="aba-conteudo-titulo-principal"> Formatura </h3>
+                <h4 class="aba-conteudo-titulo-secundario">Tempo que falta</h4>
+                <div class="contador">
+                    <div class="contador-digito">
+                        <p class="contador-digito-Número" id="dias1"></p>
+                        <p class="contador-digito-texto"> dias</p>
+                    </div>
+                    <div class="contador-digito">
+                        <p class="contador-digito-Número" id="horas1"></p>
+                        <p class="contador-digito-texto"> horas</p>
+                    </div>
+                    <div class="contador-digito">
+                        <p class="contador-digito-Número" id="min1"></p>
+                        <p class="contador-digito-texto"> min</p>
+                    </div>
+                    <div class="contador-digito">
+                        <p class="contador-digito-Número" id="seg1"></p>
+                        <p class="contador-digito-texto"> seg</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="aba-conteudo">
+                <h3 class="aba-conteudo-titulo-principal"> 2°Trimestre </h3>
+                <h4 class="aba-conteudo-titulo-secundario">Tempo que falta</h4>
+                <div class="contador">
+                    <div class="contador-digito">
+                        <p class="contador-digito-Número" id="dias2"></p>
+                        <p class="contador-digito-texto"> dias</p>
+                    </div>
+                    <div class="contador-digito">
+                        <p class="contador-digito-Número" id="horas2"></p>
+                        <p class="contador-digito-texto"> horas</p>
+                    </div>
+                    <div class="contador-digito">
+                        <p class="contador-digito-Número" id="min2"></p>
+                        <p class="contador-digito-texto"> min</p>
+                    </div>
+                    <div class="contador-digito">
+                        <p class="contador-digito-Número" id="seg2"></p>
+                        <p class="contador-digito-texto"> seg</p>
+                    </div>
 
-</body>
+                </div>
+            </div>
+            <div class="aba-conteudo">
+                <h3 class="aba-conteudo-titulo-principal"> Dia da independência </h3>
+                <h4 class="aba-conteudo-titulo-secundario">Tempo que falta</h4>
+                <div class="contador">
+                    <div class="contador-digito">
+                        <p class="contador-digito-Número" id="dias3"></p>
+                        <p class="contador-digito-texto"> dias</p>
+                    </div>
+                    <div class="contador-digito">
+                        <p class="contador-digito-Número" id="horas3"></p>
+                        <p class="contador-digito-texto"> horas</p>
+                    </div>
+                    <div class="contador-digito">
+                        <p class="contador-digito-Número" id="min3"></p>
+                        <p class="contador-digito-texto"> min</p>
+                    </div>
+                    <div class="contador-digito">
+                        <p class="contador-digito-Número" id="seg3"></p>
+                        <p class="contador-digito-texto"> seg</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+       </section>
+<script src="main.js"></script> <!--É o que conectou ou chamou o Javascript extremamente importande,-->
+    
+    </body>
 </html>

@@ -1,83 +1,112 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap');
 
-:root{
-    --fundo:#000000;
-    --Verde: #6FFF57;
-    --Branco:#ffffff;
-    --Fundo-do-tempo:rgba(58, 55, 94, 0.3);
-    --botão-ativo:#3A375E 50%;
-    --botão-inativo:rgba(58, 55, 94, 0.5);
-    --font: chakra Petch;
+:root {
+    --cor-de-fundo: #1E1E1E;
+    --verde: #6FFF57;
+    --branco: #FFFFFF;
+    --botao-ativo: #3A375E;
+    --botao-inativo: rgba(58, 55, 94, 0.5);
+    --texto-fundo: rgba(58, 55, 94, 0.3);
+}
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco);
+    font-family: 'Chakra Petch', sans-serif;
+}
+.conteudo-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+.titulo-principal {
+    text-align: left;
+    width: 100%;
+    font-size: 32px;
+}
+.titulo-principal span {
+    color: var(--verde);
+}
+.botao {
+    font-family: 'Chakra Petch', sans-serif;
+    background-color: var(--botao-inativo);
+    color: var(--branco);
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    font-size: 18px;
+    align-items: center;
+    width: 100%;
+    border-bottom: 4px solid var(--botao-ativo);
+    border-left: 2px solid var(--botao-ativo);
+    border-right: 2px solid var(--botao-ativo);
+    border-top: none;
+}
+.botao:first-child {
+    border-radius: 40px 40px 0 0;
+}
+.botoes {
+    display: block;
+}
+.botao.ativo{
+    background-color: var(--botao-ativo);
+    border-bottom: 4px solid var(--verde);
+}
+.abas-textos{
+    background-color: var(--texto-fundo);
+    padding: 40px;
+    border-radius: 0 0 40px 40px;
+}
+.aba-conteudo.ativo{
+    display:block;
+}
+.aba-conteudo{
+    display: none;
+}
+.aba-conteudo-titulo-principal{
+    font-size: 28px;
+    text-align: center;
+}
+.aba-conteudo-titulo-secundario{
+    text-align: center;
+    color: var(--verde);
+    text-transform: uppercase;
 }
 
-body{
-    background-color: var(--fundo);
-    color: var(--Branco);
-    font-family: 'chakra Petch' , sans-serif;
+.contador{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-    .conteudo-principal{
+.contador-digito{
+    padding: 0 15px;
+    text-align: center;
+    min-width: 100px;
+}
+
+.contador-digito-Número{
+    font-size: 70px;
+    margin: 0;
+}
+.contador-digito-texto{
+    color: var(--verde);
+    font-size: 15px;
+    margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .botoes {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        max-width:1200px;
-        width: 100%;
-        margin: 0 auto;
     }
-
-    .titulo-principal{
-        text-align: left;
-        width: 100%; 
-        font-size: 32px;
+    .botao:first-child {
+        border-radius: 40px 0 0 0;
     }
-
-    .titulo-principal span{
-        color: var(--Verde);
+    .botao:last-child {
+        border-radius: 0 40px 0 0;
     }
-
-
-
-    .botão{
-        font-family: 'chakra Petch', sans-serif;
-        background-color: var(--botão-inativo);
-        color: var(--Branco);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        padding: 1em;
-        font-size: 18px;
-        border-bottom: 4px solid var(--botão-ativo);
-        border-left: 2px solid var(--botão-ativo);
-        border-right: 2px solid var(--botão-ativo);
-        border-top: none;
-    }
-
-    .botão:first-child{
-        border-radius: 40px 40px 0 0;
-        border-bottom: 4px solid var(--Verde);
-    }
-
-    .Botões{
-        display: block; /*Para quando for no mobile fique como coluns e não row */
-    }
-
-    .ativo{
-        background-color: var(--botão-ativo);
-
-    }
-
-    @media screen and (min-width: 768px) {
-        .Botões{
-            display: flex; /*Para quando for aparelhos maiores fique em row e não em coluns*/
-        }
-
-        .botão:first-child{
-            border-radius: 40px 0 0 0 ;
-        }
-
-        .botão:last-child{
-            border-radius: 0 40px 0 0;
-        }
-    }
+}
